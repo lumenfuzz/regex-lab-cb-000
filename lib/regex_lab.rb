@@ -4,7 +4,13 @@ def starts_with_a_vowel?(word)
 end
 
 def words_starting_with_un_and_ending_with_ing(text)
-  text.scan(/^un.*ing$/)
+  old_array =  text.split(" ")
+  new_array = []
+  old_array.each do |word|
+    if word.match(/^un.*ing$/) != nil
+      new_array << word
+    end
+  end
 end
 
 def words_five_letters_long(text)
