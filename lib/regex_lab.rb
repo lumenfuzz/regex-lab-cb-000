@@ -17,6 +17,7 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-  phone.gsub(/[)( -]/, "")
-  /[0-9]{10}/.match
+  word = phone.gsub(/[)( -]/, "")
+  return true if word.match(/[0-9]{10}/) != nil
+  return false if word.match(/[0-9]{10}/) == nil
 end
